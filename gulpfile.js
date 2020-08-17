@@ -90,7 +90,7 @@ function css() {
                 extname: ".min.css"
             })
         )
-        .pipe(maps.write(path.build.css))
+        .pipe(maps.write("./"))
         .pipe(dest(path.build.css))
         .pipe(browsersync.stream())
 }
@@ -109,7 +109,7 @@ function js() {
                 extname: ".min.js"
             })
         )
-        .pipe(maps.write(path.build.js))
+        .pipe(maps.write("./"))
         .pipe(dest(path.build.js))
         .pipe(browsersync.stream())
 }
